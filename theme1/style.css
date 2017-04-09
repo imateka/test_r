@@ -1,0 +1,260 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, strong,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, legend, caption,
+tbody, tfoot, thead, table, label, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  outline: 0;
+  vertical-align: baseline;
+  list-style: none; }
+
+html, body {
+  margin: 0;
+  color: #382b2b;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-weight: 500; }
+
+body {
+  font-size: 14px;
+  line-height: 1.25; }
+
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    color: #f39800; }
+
+.clear {
+  clear: both;
+  line-height: 0; }
+
+#page {
+  background: url("images/wall02.png"); }
+
+.area-header {
+  text-align: center;
+  position: relative; }
+  .area-header * {
+    position: relative; }
+  .area-header:before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 1240px;
+    margin: 0 auto;
+    background: url("images/header.png") no-repeat right center;
+    background-size: auto 100%;
+    opacity: 0.9; }
+  .area-header p {
+    padding: 0 0 20px; }
+
+.area-contents {
+  padding: 60px 0; }
+  .area-contents-inner {
+    width: 940px;
+    margin: 0 auto; }
+
+.area-main {
+  width: 715px;
+  padding: 0 20px 0 0;
+  float: left; }
+
+.area-side {
+  width: 225px;
+  float: right; }
+
+.area-footer {
+  margin: 100px 0 0;
+  background-color: #382b2b;
+  color: #fff; }
+  .area-footer-inner {
+    width: 940px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: table;
+    table-layout: fixed; }
+
+.prt-lv1H, .blog_title {
+  padding: 40px 0 25px;
+  font-size: 40px; }
+
+.prt-lv2H {
+  margin: 0 0 20px;
+  font-size: 26px; }
+
+.prt-lv3H_side {
+  margin: 0 0 10px;
+  padding: 5px 10px;
+  background-color: #ffbd4d;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px; }
+
+.prt-lv3H_footer {
+  margin: 0 0 10px;
+  padding: 0 0 3px;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 16px; }
+
+#nav,
+.prt-nav {
+  background: #f39800;
+  color: #fff;
+  text-align: center; }
+  #nav ul,
+  .prt-nav ul {
+    width: 940px;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed; }
+  #nav li,
+  .prt-nav li {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle; }
+    #nav li a,
+    .prt-nav li a {
+      padding: 10px;
+      display: block;
+      transition: all 0.3s; }
+      #nav li a:hover,
+      .prt-nav li a:hover {
+        background-color: #fff;
+        color: #f39800; }
+    #nav li:before,
+    .prt-nav li:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 0;
+      width: 1px;
+      background-color: #fff; }
+    #nav li:first-child:before,
+    .prt-nav li:first-child:before {
+      display: none; }
+
+.blog_info {
+  margin: 0 0 20px;
+  padding: 5px;
+  background: rgba(243, 152, 0, 0.15);
+  color: #666;
+  display: inline-block;
+  font-size: 12px; }
+  .blog_info li {
+    margin: 0 15px 0 5px;
+    padding: 0 0 0 20px;
+    float: left; }
+  .blog_info a {
+    color: #666; }
+    .blog_info a:hover {
+      color: #333; }
+  .blog_info .cal {
+    background: url("images/icon_cal.png") no-repeat; }
+  .blog_info .cat {
+    background: url("images/icon_cat.png") no-repeat; }
+  .blog_info .tag {
+    background: url("images/icon_tag.png") no-repeat; }
+
+.more-link {
+  max-width: 90px;
+  margin: 0 0 0 auto;
+  padding: 5px 20px 5px 10px;
+  background: url("images/arrow_next.png") no-repeat right top;
+  display: block;
+  font-size: 12px; }
+
+.post {
+  width: 49%;
+  margin: 0 0.3% 1%;
+  padding: 15px 15px 0;
+  background-color: #fff;
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: top; }
+  .post p {
+    margin-bottom: 20px; }
+
+.nav-below {
+  margin: 40px 0 0; }
+  .nav-below .nav-previous {
+    margin: 0 auto 0 0; }
+  .nav-below .nav-next {
+    margin: 0 0 0 auto; }
+  .nav-below a {
+    padding: 5px;
+    background: rgba(243, 152, 0, 0.15);
+    transition: all 0.3s; }
+    .nav-below a:hover {
+      background: rgba(243, 152, 0, 0.35); }
+
+#sidebar .widget-area .widget-container,
+.area-side .widget-area .widget-container {
+  margin: 0 0 20px; }
+  #sidebar .widget-area .widget-container li,
+  .area-side .widget-area .widget-container li {
+    padding: 0 0 3px 18px;
+    position: relative; }
+    #sidebar .widget-area .widget-container li:before,
+    .area-side .widget-area .widget-container li:before {
+      content: "▷";
+      position: absolute;
+      pointer-events: none;
+      top: 2px;
+      bottom: 0;
+      left: 3px;
+      right: 0;
+      font-size: 10px; }
+
+#wp-calendar {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px; }
+  #wp-calendar caption {
+    padding: 0 0 6px; }
+  #wp-calendar th, #wp-calendar td {
+    padding: 3%;
+    text-align: center; }
+
+.area-footer .widget-area {
+  padding-left: 30px;
+  display: table-cell; }
+  .area-footer .widget-area:first-child {
+    padding-left: 0; }
+.area-footer .widget-container li {
+  padding: 0 0 5px 18px;
+  position: relative; }
+  .area-footer .widget-container li:before {
+    content: "▷";
+    position: absolute;
+    pointer-events: none;
+    top: 2px;
+    bottom: 0;
+    left: 3px;
+    right: 0;
+    font-size: 10px; }
+
+.copy {
+  padding: 10px 0;
+  text-align: center; }
+
+body.single .post {
+  width: 100%;
+  margin: 0; }
+
+/*# sourceMappingURL=style.css.map */

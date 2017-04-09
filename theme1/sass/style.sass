@@ -1,0 +1,294 @@
+@charset "UTF-8"
+
+//$baseFontColor : #777
+$brown: #382b2b
+$orange: #f39800
+$baseFontColor: $brown
+$hoverColor: $orange
+$fontYG: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "メイリオ",  'Meiryo', sans-serif
+
+// ****************************************
+//     1. General Setting
+// ****************************************
+
+html, body, div, span, applet, object, iframe, strong,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, legend, caption, 
+tbody, tfoot, thead, table, label, tr, th, td
+  margin: 0
+  padding: 0
+  border: 0
+  font-weight: normal
+  outline: 0
+  vertical-align: baseline
+  list-style: none
+
+html, body
+  // height: 100%
+  margin: 0
+  color: $baseFontColor
+  font-family: $fontYG
+  font-weight: 500
+
+body
+  font-size: 14px
+  line-height: 1.25
+
+*
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: inherit
+  &:hover
+    color: $hoverColor
+
+.clear
+  clear: both
+  line-height: 0
+
+// ****************************************
+//     2. Basic Layout
+// ****************************************
+$contentWidth: 940px
+$mainWidth: 715px
+$sideWidth: 225px
+
+
+#page
+  background: url("images/wall02.png")
+
+//ヘッダー
+.area-header
+  text-align: center
+  position: relative
+  *
+    position: relative
+  &:before
+    content: ""
+    position: absolute
+    pointer-events: none
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    width: $contentWidth + 300px
+    margin: 0 auto
+    background: url("images/header.png") no-repeat right center
+    background-size: auto 100%
+    opacity: 0.9
+  p
+    padding: 0 0 20px
+
+.area-contents
+  padding: 60px 0
+  &-inner
+    width: $contentWidth
+    margin: 0 auto
+
+.area-main
+  width: $mainWidth
+  padding: 0 20px 0 0
+  float: left
+
+.area-side
+  width: $sideWidth
+  float: right
+
+.area-footer
+  margin: 100px 0 0
+  background: url("images/wall03.png") repeat left top
+  background-color: $brown
+  color: #fff
+  &-inner
+    width: $contentWidth
+    margin: 0 auto
+    padding: 30px 0
+    display: table
+    table-layout: fixed
+
+// ****************************************
+//     3. Module
+// ****************************************
+//見出し
+.prt-lv1H, .blog_title
+  padding: 40px 0 25px
+  font-size: 40px
+
+.prt-lv2H
+  margin: 0 0 20px
+  font-size: 26px
+
+.prt-lv3H_side
+  margin: 0 0 10px
+  padding: 5px 10px
+  background-color: #ffbd4d
+  border-radius: 3px
+  color: #fff
+  font-size: 14px
+
+.prt-lv3H_footer
+  margin: 0 0 10px
+  padding: 0 0 3px
+  border-bottom: 1px solid #fff
+  color: #fff
+  font-size: 16px
+
+
+//ヘッダーメニュー
+.prt-nav
+  background: $orange
+  color: #fff
+  text-align: center
+  ul
+    width: $contentWidth
+    margin: 0 auto
+    display: table
+    table-layout: fixed
+  li
+    display: table-cell
+    position: relative
+    vertical-align: middle
+    transition: all .3s
+    a
+      padding: 10px
+      display: block
+    &:hover
+      background-color: #fff
+      color: $orange
+    &:before
+      content: ""
+      position: absolute
+      top: 10px
+      bottom: 10px
+      left: 0
+      width: 1px
+      background-color: #fff
+    &:first-child
+      &:before
+        display: none
+
+//ブログ記事の概要を書くラベル
+.blog_info
+  margin: 0 0 20px
+  padding: 5px
+  background: rgba($orange,0.15)
+  color: #666
+  display: inline-block
+  font-size: 12px
+  li
+    margin: 0 15px 0 5px
+    padding: 0 0 0 20px
+    float: left
+  a
+    color: #666
+    &:hover
+      color: #333
+  .cal
+    background: url("images/icon_cal.png") no-repeat
+  .cat
+    background: url("images/icon_cat.png") no-repeat
+  .tag
+    background: url("images/icon_tag.png") no-repeat
+
+.more-link
+  max-width: 90px
+  margin: 0 0 0 auto
+  padding: 5px 20px 5px 10px
+  background: url("images/arrow_next.png") no-repeat right top
+  display: block
+  font-size: 12px
+
+.post
+  width: 49%
+  margin: 0 0.3% 1%
+  padding: 15px 15px 0
+  background-color: #fff
+  border-radius: 3px
+  display: inline-block
+  vertical-align: top
+  p
+    margin-bottom: 20px
+  img
+    max-width: 100%
+    height: auto
+
+//記事下部の「前へ」「次へ」
+.nav-below
+  margin: 40px 0 0
+  .nav-previous
+    margin: 0 auto 0 0
+  .nav-next
+    margin: 0 0 0 auto
+  a
+    padding: 5px
+    background: rgba($orange,0.15)
+    transition: all .3s
+    &:hover
+      background: rgba($orange,0.35)
+
+
+//サイドエリアのウィジェットエリア
+#sidebar,
+.area-side
+  .widget-area
+    .widget-container
+      margin: 0 0 20px
+      li
+        padding: 0 0 3px 18px
+        position: relative
+        &:before
+          content: "▷"
+          position: absolute
+          pointer-events: none
+          top: 2px
+          bottom: 0
+          left: 3px
+          right: 0
+          font-size: 10px
+
+//サイドエリアのカレンダー
+#wp-calendar
+  width: 100%
+  background-color: #fff
+  border-radius: 3px
+  caption
+    padding: 0 0 6px
+  th, td
+    padding: 3%
+    text-align: center
+
+//フッターエリアのウィジェットエリア
+.area-footer
+  .widget-area
+    padding-left: 30px
+    display: table-cell
+    &:first-child
+      padding-left: 0
+  .widget-container
+    li
+      padding: 0 0 5px 18px
+      position: relative
+      &:before
+        content: "▷"
+        position: absolute
+        pointer-events: none
+        top: 2px
+        bottom: 0
+        left: 3px
+        right: 0
+        font-size: 10px
+
+//コピーライト
+.copy
+  padding: 10px 0
+  text-align: center
+
+body.single
+  .post
+    width: 100%
+    margin: 0

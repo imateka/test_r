@@ -392,6 +392,7 @@ a {
     padding: 0; }
 
   .area-footer {
+    margin: 20px 0 0;
     padding: 0 15px; }
     .area-footer-inner {
       width: 100%; }

@@ -1,0 +1,8 @@
+
+.DS_Store
+
+/**/.sass-cache
+
+/theme1/*.map
+/theme1/dest
+/theme1/*.html
